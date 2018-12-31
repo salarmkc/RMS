@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - پدرسالار</title>
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    @*<link href="~/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/colors/default-dark.css" id="theme" rel="stylesheet">
+    <link href="~/font/IRANSans/css/style.css" rel="stylesheet" />
+    <link href="~/lib/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet" />
+
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+
+</head>
+<body class="fix-sidebar fix-header card-no-border">
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">پدر سالار</p>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+        <partial name="_NavBar" />
+        <partial name="_LeftSidebar" />
+
+        <div class="page-wrapper">
+            <div class="container-fluid  body-content">
+                <div class="row page-titles">
+                    <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+                </div>
+
+                @RenderBody()
+                <partial name="_RightSidebar" />
+
+            </div>
+            <footer class="footer">
+                © 2018 RMC - Management App
+            </footer>
+        </div>
+    </div>
+
+    @*<partial name="_CookieConsentPartial" />
+
+        <div class="container-fluid body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; 2018 - MainWeb</p>
+            </footer>
+        </div>*@
+
+    @*<environment include="Development">
+                <script src="~/lib/jquery/dist/jquery.js"></script>
+                <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="~/js/site.js" asp-append-version="true"></script>
+
+            </environment>
+        <environment exclude="Development">
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.min.js">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>*@
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/perfect-scrollbar.jquery.min.js"></script>
+
+    <script src="~/js/waves.js"></script>
+    <script src="~/js/sidebarmenu.js"></script>
+
+    <script src="~/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="~/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="~/js/custom.min.js"></script>
+    <!-- JS Core -->
+    <!-- Bootstrap tether Core JavaScript -->
+    @*<script src="~/assets/plugins/bootstrap/js/popper.min.js"></script>
+        <script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>*@
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <!--Wave Effects -->
+    <!--Menu sidebar -->
+    <!--stickey kit -->
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="~/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+
+</html>

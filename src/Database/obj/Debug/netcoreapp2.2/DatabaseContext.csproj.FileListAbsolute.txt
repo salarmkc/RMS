@@ -1,0 +1,14 @@
+D:\GitLab\RMS\src\Database\bin\Debug\netcoreapp2.2\DatabaseContext.deps.json
+D:\GitLab\RMS\src\Database\bin\Debug\netcoreapp2.2\DatabaseContext.runtimeconfig.json
+D:\GitLab\RMS\src\Database\bin\Debug\netcoreapp2.2\DatabaseContext.runtimeconfig.dev.json
+D:\GitLab\RMS\src\Database\bin\Debug\netcoreapp2.2\DatabaseContext.dll
+D:\GitLab\RMS\src\Database\bin\Debug\netcoreapp2.2\DatabaseContext.pdb
+D:\GitLab\RMS\src\Database\bin\Debug\netcoreapp2.2\ApplicationCore.dll
+D:\GitLab\RMS\src\Database\bin\Debug\netcoreapp2.2\ApplicationCore.pdb
+D:\GitLab\RMS\src\Database\obj\Debug\netcoreapp2.2\DatabaseContext.csprojAssemblyReference.cache
+D:\GitLab\RMS\src\Database\obj\Debug\netcoreapp2.2\DatabaseContext.csproj.CoreCompileInputs.cache
+D:\GitLab\RMS\src\Database\obj\Debug\netcoreapp2.2\DatabaseContext.AssemblyInfoInputs.cache
+D:\GitLab\RMS\src\Database\obj\Debug\netcoreapp2.2\DatabaseContext.AssemblyInfo.cs
+D:\GitLab\RMS\src\Database\obj\Debug\netcoreapp2.2\DatabaseContext.csproj.CopyComplete
+D:\GitLab\RMS\src\Database\obj\Debug\netcoreapp2.2\DatabaseContext.dll
+D:\GitLab\RMS\src\Database\obj\Debug\netcoreapp2.2\DatabaseContext.pdb

@@ -1,0 +1,64 @@
+﻿@model ApplicationCore.ViewModel.Location.CountryViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h3 class="text-themecolor">تایید حذف</h3>
+    </div>
+    <div class="col-md-7 align-self-center">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index">کشور</a></li>
+            <li class="breadcrumb-item active">موقعیت</li>
+        </ol>
+    </div>
+
+</div>
+
+<div>
+    <h4>Country</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ISO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ISO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LatinName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LatinName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ISO3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ISO3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CountryCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CountryCode)
+        </dd>
+
+
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="Index">بازگشت به لیست</a>
+    </form>
+</div>

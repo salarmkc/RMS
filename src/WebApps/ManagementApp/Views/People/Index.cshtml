@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ApplicationCore.ViewModel.Person.PersonViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">جدید</a>
+</p>
+
+<div class="row">
+
+
+    @foreach (var item in Model)
+    {
+        var base64 = Convert.ToBase64String(item.PhotoId);
+        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+        <div class="col-md-6 col-lg-6 col-xlg-4">
+            <div class="card card-body">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 text-center">
+                        <img src="@imgSrc" class="img-standardgrid img-responsive" />
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+                        <h3 class="box-title m-b-0"> @Html.DisplayFor(modelItem => item.PersonGroup.Name)</h3><hr /><h3 class="box-title m-b-0"> @Html.DisplayFor(modelItem => item.FirstName) </h3>
+                        <br />
+                        <small> @Html.DisplayFor(modelItem => item.Gender)</small>
+                        <br />
+                        <small> @Html.DisplayFor(modelItem => item.BirthDate)</small>
+                        <address>
+                            <br>
+
+                        </address>
+
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-warning"><i class="fa fa-edit"></i> ویرایش</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-info"><span class="fa fa-info"> </span> جزئیات </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger"> <span class="fa fa-remove"> </span> حذف</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

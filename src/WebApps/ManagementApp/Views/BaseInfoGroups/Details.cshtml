@@ -1,0 +1,31 @@
+﻿@model ApplicationCore.ViewModel.BaseInfo.BaseInfoGroupViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>جزئیات</h1>
+
+<div>
+    <h4>BaseInfoGroup</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BaseInfoGroupName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BaseInfoGroupName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BaseInfoGroupText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BaseInfoGroupText)
+        </dd>
+       
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.">ویرایش</a> |
+    <a asp-action="Index">بازگشت به لیست</a>
+</div>

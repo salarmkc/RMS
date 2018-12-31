@@ -1,0 +1,34 @@
+﻿@model ApplicationCore.ViewModel.Branch.DrawerPaymentViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>تائید حذف</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentGroup)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentGroup.Class)
+        </dd >
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Drawer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Drawer.Name)
+        </dd >
+        
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">بازگشت به لیست</a>
+    </form>
+</div>

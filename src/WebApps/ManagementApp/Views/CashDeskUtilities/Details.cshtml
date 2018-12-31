@@ -1,0 +1,31 @@
+﻿@model ApplicationCore.ViewModel.CashDesk.CashDeskUtilityViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>CashDeskUtility</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CashDesk)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CashDesk.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Utility)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Utility.MainName)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">ویرایش</a> |
+    <a asp-action="Index">بازگشت به لیست</a>
+</div>

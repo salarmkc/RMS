@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ApplicationCore.ViewModel.Location.LocationViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">افزودن</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProvinceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BranchId)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Province.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City.Id)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.BranchId)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.LocationId">ویرایش</a> |
+                    <a asp-action="Details" asp-route-id="@item.LocationId">جزئیات</a> |
+                    <a asp-action="Delete" asp-route-id="@item.LocationId">حذف</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

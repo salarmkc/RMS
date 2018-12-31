@@ -1,0 +1,49 @@
+﻿@model ApplicationCore.ViewModel.Warehouse.WarehouseViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BaseInfoActionCode" class="control-label"></label>
+                <input asp-for="BaseInfoActionCode" class="form-control" />
+                <span asp-validation-for="BaseInfoActionCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManualCode" class="control-label"></label>
+                <input asp-for="ManualCode" class="form-control" />
+                <span asp-validation-for="ManualCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MeasureId" class="control-label"></label>
+                <select asp-for="MeasureId" class="form-control" asp-items="ViewBag.MeasureId"></select>
+                <span asp-validation-for="MeasureId" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsDefault" /> @Html.DisplayNameFor(model => model.IsDefault)
+                </label>
+            </div>
+            <input type="hidden" asp-for="Id" />
+           
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">بازگشت به لیست</a>
+</div>
+

@@ -1,0 +1,49 @@
+﻿@model ApplicationCore.ViewModel.Menu.ManagementAppMenuViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="AppMenuId" class="control-label"></label>
+                <select asp-for="AppMenuId" class="form-control" asp-items="ViewBag.AppMenuId"></select>
+                <span asp-validation-for="AppMenuId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MenuName" class="control-label"></label>
+                <input asp-for="MenuName" class="form-control" />
+                <span asp-validation-for="MenuName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MenuClass" class="control-label"></label>
+                <input asp-for="MenuClass" class="form-control" />
+                <span asp-validation-for="MenuClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MenuUrl" class="control-label"></label>
+                <input asp-for="MenuUrl" class="form-control" />
+                <span asp-validation-for="MenuUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Priority" class="control-label"></label>
+                <input asp-for="Priority" class="form-control" />
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">بازگشت به لیست</a>
+</div>
+

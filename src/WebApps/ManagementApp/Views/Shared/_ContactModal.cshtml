@@ -1,0 +1,95 @@
+﻿@model ApplicationCore.ViewModel.Contact.ContactModalViewModel
+
+<div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                <h4 class="modal-title">اطلاعات تماس</h4>
+            </div>
+
+
+            <div class="modal-body">
+                @*<form id="contact_form" asp-controller="Contacts" asp-action="Create"
+                    asp-route-returnurl="@ViewData["ReturnUrl"]"
+                    method="post" class="form-horizontal" role="form">*@
+                <form id="contact_form" asp-action="AddContact" asp-controller="Holdings" class="form-horizontal" role="form">
+                    <input type="hidden" id="EntityRecordId" name="EntityRecordId" value="@Model.Id" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <label asp-for="CityId" class="control-label"></label>
+                                <select asp-for="CityId" id="e2" style="width: 100%; height: 36px;" class="form-control" asp-items="ViewBag.CitiesId"></select>
+                                <span asp-validation-for="CityId" class="text-danger"></span>
+                            </div>
+                            @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="Countries" class="control-label"></label>
+                                    <select asp-for="CountryId" class="form-control" asp-items="ViewBag.CountryId"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CityId" class="control-label"></label>
+                                    <select asp-for="CityId" class="form-control" asp-items="ViewBag.CityId"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ProvinceId" class="control-label"></label>
+                                    <select asp-for="ProvinceId" class="form-control" asp-items="ViewBag.ProvinceId"></select>
+                                </div>*@
+                            <div class="form-group">
+                                <label asp-for="Tel" class="control-label"></label>
+                                <input asp-for="Tel" class="form-control"/>
+                                <span asp-validation-for="Tel" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Mobile" class="control-label"></label>
+                                <input asp-for="Mobile" class="form-control"/>
+                                <span asp-validation-for="Mobile" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address" class="control-label"></label>
+                                <input asp-for="Address" class="form-control" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Fax" class="control-label"></label>
+                                <input asp-for="Fax" class="form-control" />
+                                <span asp-validation-for="Fax" class="text-danger"></span>
+                            </div>
+                          
+                            <div class="form-group">
+                                <label asp-for="WebSite" class="control-label"></label>
+                                <input asp-for="WebSite" class="form-control" />
+                                <span asp-validation-for="WebSite" class="text-danger"></span>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <div class="checkbox checkbox-info float-left p-t-0">
+                                        <input name="IsPrimary" id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
+                                        <label for="checkbox-signup"> @Html.DisplayNameFor(model => model.IsPrimary)</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">انصراف</button>
+                <button type="submit" id="submitForm" class="btn btn-danger waves-effect waves-light">ذخیره</button>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
